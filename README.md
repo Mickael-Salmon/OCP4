@@ -7,12 +7,11 @@ Bienvenue ! Vous trouverez ici le Projet 4 du parcours<a href="https://openclass
 
 </h3>
 
-<h2 align="center">
+<h2 align="center" # Développez un programme logiciel en Python 💻 !>
 
-# Développez un programme logiciel en Python 💻 !
-
-<p align="center" <a href="" target="_blank" rel="noreferrer"><img src="https://github.com/MicSa/OCP4/blob/main/chesspict.png"></a>>
+ <p align="center" <a href="" target="_blank" rel="noreferrer"><img src="https://github.com/MicSa/OCP4/blob/main/chesspict.png"></a>>
 </p>
+
 </h2>
 
 <h2> Scénario </h2>
