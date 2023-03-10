@@ -13,8 +13,7 @@ Bienvenue ! Vous trouverez ici le Projet 4 du parcours<a href="https://openclass
 
 </h2>
 
-> [!Scénario] 
-> ###  
+<h3> Scénario </h3>
 
 Vous êtes un développeur junior depuis deux mois et vous travaillez en freelance pour écrire des scripts simples afin d’aider les petites entreprises locales à gérer leur inventaire. 
 
@@ -28,8 +27,8 @@ Elie, votre amie et elle aussi développeuse Python, est membre du club d'échec
 
 - 💬 Vous suggérez que vous pourriez écrire un outil qui permette de gérer les tournois pour aider le club, mais qui fonctionne hors ligne. Elie aime bien votre idée et elle dit qu'elle en discutera la prochaine fois qu'elle se rendra au club. Comme elle s’occupe déjà de plusieurs contrats en freelance, elle accepte de vous recommander comme candidat idéal pour développer cette application.
 
-> [!Livrables attendus 🔭 ] 
-> ##   
+ <h3>Livrables attendus 🔭 </h3> 
+   
 
 -   Le code de l'application, tel que prescrit dans la spécification technique ;
 -   Un répertoire contenant un fichier HTML, généré par **flake8-html**, ne montrant aucune erreur de peluchage dans le code ;
