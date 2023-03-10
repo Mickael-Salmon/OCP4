@@ -1,11 +1,8 @@
 <p align="center" <a href="" target="_blank" rel="noreferrer"><img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fwww.python.org%2Fstatic%2Fcommunity_logos%2Fpython-logo-master-v3-TM.png&sp=1678450408T4e2eae9177a1d48c962869bcfa7ae8c5f16b84722f382e576e60601b8ecd2605"></a>>
 </p>
 
-<h3 align="center">
-
-Bienvenue ! Vous trouverez ici le Projet 4 du parcours<a href="https://openclassrooms.com/fr/paths/518-developpeur-dapplication-python" target="_blank" rel="noreferrer"> Développeur d'application - Python</a> 👋
-
-</h3>
+<h2 align="center" Bienvenue ! Vous trouverez ici le Projet 4 du parcours<a href="https://openclassrooms.com/fr/paths/518-developpeur-dapplication-python" target="_blank" rel="noreferrer"> Développeur d'application - Python</a> 👋>
+</h2>
 
 <h2 align="center" # Développez un programme logiciel en Python 💻 !>
 
