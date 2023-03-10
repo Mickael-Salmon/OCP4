@@ -111,4 +111,4 @@ $ pip install -r requirements.txt
 
 <h3>Lancer le programme </h3>
 
-$ python3 main.py
+$ python main.py
