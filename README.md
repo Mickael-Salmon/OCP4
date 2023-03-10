@@ -13,10 +13,9 @@ Bienvenue ! Vous trouverez ici le Projet 4 du parcours<a href="https://openclass
 
 <p align="center" <a href="" target="_blank" rel="noreferrer"><img src="https://github.com/MicSa/OCP4/blob/main/chesspict.png"></a>>
 </p>
-
 </h2>
 
-<h3> Scénario </h3>
+<h2> Scénario </h2>
 
 Vous êtes un développeur junior depuis deux mois et vous travaillez en freelance pour écrire des scripts simples afin d’aider les petites entreprises locales à gérer leur inventaire. 
 
