@@ -30,14 +30,14 @@ Elie, votre amie et elle aussi développeuse Python, est membre du club d'échec
  <h3>Livrables attendus 🔭 </h3> 
    
 
--   Le code de l'application, tel que prescrit dans la spécification technique ;
--   Un répertoire contenant un fichier HTML, généré par **flake8-html**, ne montrant aucune erreur de peluchage dans le code ;
--   Un fichier **README.md** contenant des instructions claires sur la manière d'exécuter le programme, de l'utiliser et de générer un nouveau fichier flake8-html.
+-   Le code de l'application, tel que prescrit dans la spécification technique 
+-   Un répertoire contenant un fichier HTML, généré par **flake8-html**, ne montrant aucune erreur de peluchage dans le code 
+-   Un fichier **README.md** contenant des instructions claires sur la manière d'exécuter le programme, de l'utiliser et de générer un nouveau fichier flake8-html
 
 </br>
 
-> [!note] 
-> Structure de dossiers du projet  
+
+ <h3>Structure de dossiers du projet</h3>  
 
 ```
 ├── controllers
@@ -58,7 +58,7 @@ Elie, votre amie et elle aussi développeuse Python, est membre du club d'échec
 
 ```
 
-Les fichiers `__init__.py sont nécessaires pour que Python reconnaisse le dossier comme un module.
+Les fichiers `__init__.py` sont nécessaires pour que Python reconnaisse le dossier comme un module.
 
 Dans le dossier `controllers`, vous pouvez placer tous les fichiers contenant la logique de contrôle, tels que la gestion des tournois, la génération de rapports et le menu principal.
 
