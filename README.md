@@ -67,3 +67,48 @@ Le dossier `models` peut contenir les modèles pour les entités dans votre prog
 Le dossier `views` peut contenir tous les fichiers qui concernent l'interface utilisateur, tels que les vues pour les rondes, les rapports et le menu principal.
 
 
+<h2> Installation et démarrage du projet</h2> 
+<h3>Windows  </h3> 
+
+Depuis un terminal , se déplacer dans le dossier applicatif souhaité :
+
+<h3>Récupération du projet</h3> 
+
+$ git clone https://github.com/MicSa/OCP4/
+
+<h3>Activer l'environnement virtuel </h3> 
+
+$ cd OCP4 
+$ python -m venv venvOCP4 
+$ ~env\scripts\activate
+
+<h3>Installer les paquets requis </h3>
+
+$ pip install -r requirements.txt
+
+<h3>Lancer le programme</h3>
+
+$ python main.py
+
+<h2>MacOS et Linux : </h2>
+
+Depuis un terminal, se déplacer dans dossier souhaité. 
+
+<h3>Récupération du projet</h3>
+
+$ git clone https://github.com/MicSa/OCP4/
+
+
+<h3>Activer l'environnement virtuel </h3>
+
+$ cd OCP4
+$ python3 -m venv venvOCP4 
+$ source env/bin/activate
+
+<h3>Installer les paquets requis </h3>
+
+$ pip install -r requirements.txt
+
+<h3>Lancer le programme </h3>
+
+$ python3 main.py
