@@ -1,0 +1,312 @@
+{
+    "_default": {
+        "1": {
+            "id": 3,
+            "name": "Paris",
+            "location": "Paris",
+            "start_date": "2023-04-11 17:16:28",
+            "end_date": "TBD",
+            "description": "BlaBla",
+            "time_control": "Bullet",
+            "current_round": 5,
+            "rounds_total": 4,
+            "players": [
+                {
+                    "id": 4,
+                    "last_name": "Chen",
+                    "first_name": "Ethan",
+                    "date_of_birth": "12/01/2003",
+                    "gender": "M",
+                    "rank": 1,
+                    "score": 0.0,
+                    "opponents": [
+                        1,
+                        5,
+                        2,
+                        5
+                    ]
+                },
+                {
+                    "id": 5,
+                    "last_name": "Lee",
+                    "first_name": "Olivia",
+                    "date_of_birth": "06/23/1997",
+                    "gender": "F",
+                    "rank": 3,
+                    "score": 0.0,
+                    "opponents": [
+                        6,
+                        4,
+                        7,
+                        4
+                    ]
+                },
+                {
+                    "id": 2,
+                    "last_name": "Garcia",
+                    "first_name": "Julian",
+                    "date_of_birth": "08/15/2002",
+                    "gender": "M",
+                    "rank": 4,
+                    "score": 0.0,
+                    "opponents": [
+                        3,
+                        7,
+                        4,
+                        1
+                    ]
+                },
+                {
+                    "id": 1,
+                    "last_name": "Smith",
+                    "first_name": "Emma",
+                    "date_of_birth": "05/09/1998",
+                    "gender": "F",
+                    "rank": 7,
+                    "score": 0.0,
+                    "opponents": [
+                        4,
+                        6,
+                        3,
+                        2
+                    ]
+                },
+                {
+                    "id": 7,
+                    "last_name": "Kim",
+                    "first_name": "Sophia",
+                    "date_of_birth": "09/11/2001",
+                    "gender": "F",
+                    "rank": 6,
+                    "score": 0.0,
+                    "opponents": [
+                        8,
+                        2,
+                        5,
+                        3
+                    ]
+                },
+                {
+                    "id": 3,
+                    "last_name": "Nguyen",
+                    "first_name": "Avery",
+                    "date_of_birth": "03/27/2000",
+                    "gender": "F",
+                    "rank": 9,
+                    "score": 0.0,
+                    "opponents": [
+                        2,
+                        8,
+                        1,
+                        7
+                    ]
+                },
+                {
+                    "id": 6,
+                    "last_name": "Zhang",
+                    "first_name": "Lucas",
+                    "date_of_birth": "02/18/2004",
+                    "gender": "M",
+                    "rank": 8,
+                    "score": 0.0,
+                    "opponents": [
+                        5,
+                        1,
+                        8,
+                        8
+                    ]
+                },
+                {
+                    "id": 8,
+                    "last_name": "Gupta",
+                    "first_name": "Arjun",
+                    "date_of_birth": "07/31/1999",
+                    "gender": "M",
+                    "rank": 10,
+                    "score": 0.0,
+                    "opponents": [
+                        7,
+                        3,
+                        6,
+                        6
+                    ]
+                }
+            ],
+            "rounds": []
+        },
+        "2": {
+            "id": 4,
+            "name": "Paris",
+            "location": "Paris",
+            "start_date": "2023-04-11 17:20:14",
+            "end_date": "TBD",
+            "description": "France",
+            "time_control": "Bullet",
+            "current_round": 5,
+            "rounds_total": 4,
+            "players": [
+                {
+                    "id": 2,
+                    "last_name": "Garcia",
+                    "first_name": "Julian",
+                    "date_of_birth": "08/15/2002",
+                    "gender": "M",
+                    "rank": 4,
+                    "score": 1.0,
+                    "opponents": [
+                        3,
+                        7,
+                        6,
+                        3
+                    ]
+                },
+                {
+                    "id": 3,
+                    "last_name": "Nguyen",
+                    "first_name": "Avery",
+                    "date_of_birth": "03/27/2000",
+                    "gender": "F",
+                    "rank": 9,
+                    "score": 1.0,
+                    "opponents": [
+                        2,
+                        8,
+                        4,
+                        2
+                    ]
+                },
+                {
+                    "id": 6,
+                    "last_name": "Zhang",
+                    "first_name": "Lucas",
+                    "date_of_birth": "02/18/2004",
+                    "gender": "M",
+                    "rank": 8,
+                    "score": 1.0,
+                    "opponents": [
+                        5,
+                        1,
+                        2,
+                        4
+                    ]
+                },
+                {
+                    "id": 4,
+                    "last_name": "Chen",
+                    "first_name": "Ethan",
+                    "date_of_birth": "12/01/2003",
+                    "gender": "M",
+                    "rank": 1,
+                    "score": 0.5,
+                    "opponents": [
+                        1,
+                        5,
+                        3,
+                        6
+                    ]
+                },
+                {
+                    "id": 5,
+                    "last_name": "Lee",
+                    "first_name": "Olivia",
+                    "date_of_birth": "06/23/1997",
+                    "gender": "F",
+                    "rank": 3,
+                    "score": 0.5,
+                    "opponents": [
+                        6,
+                        4,
+                        7,
+                        1
+                    ]
+                },
+                {
+                    "id": 1,
+                    "last_name": "Smith",
+                    "first_name": "Emma",
+                    "date_of_birth": "05/09/1998",
+                    "gender": "F",
+                    "rank": 7,
+                    "score": 0.0,
+                    "opponents": [
+                        4,
+                        6,
+                        8,
+                        5
+                    ]
+                },
+                {
+                    "id": 7,
+                    "last_name": "Kim",
+                    "first_name": "Sophia",
+                    "date_of_birth": "09/11/2001",
+                    "gender": "F",
+                    "rank": 6,
+                    "score": 0.0,
+                    "opponents": [
+                        8,
+                        2,
+                        5,
+                        8
+                    ]
+                },
+                {
+                    "id": 8,
+                    "last_name": "Gupta",
+                    "first_name": "Arjun",
+                    "date_of_birth": "07/31/1999",
+                    "gender": "M",
+                    "rank": 10,
+                    "score": 0.0,
+                    "opponents": [
+                        7,
+                        3,
+                        1,
+                        7
+                    ]
+                }
+            ],
+            "rounds": [
+                [
+                    "Round 2",
+                    "2023-04-11 17:20:14",
+                    "2023-04-11 17:20:14",
+                    [
+                        [
+                            "Chen, Ethan",
+                            1,
+                            0.0,
+                            "Lee, Olivia",
+                            3,
+                            0.0
+                        ],
+                        [
+                            "Garcia, Julian",
+                            4,
+                            0.0,
+                            "Kim, Sophia",
+                            6,
+                            0.0
+                        ],
+                        [
+                            "Smith, Emma",
+                            7,
+                            0.0,
+                            "Zhang, Lucas",
+                            8,
+                            0.0
+                        ],
+                        [
+                            "Nguyen, Avery",
+                            9,
+                            0.0,
+                            "Gupta, Arjun",
+                            10,
+                            0.0
+                        ]
+                    ]
+                ]
+            ]
+        }
+    }
+}
