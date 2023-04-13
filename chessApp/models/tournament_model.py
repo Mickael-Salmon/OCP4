@@ -53,7 +53,8 @@ class Tournament:
 
     def sort_players_by_score(self):
         """Sort players by score (descending)"""
-        self.players = sorted(self.players, key=lambda x: x.get('score'), reverse=True)
+        self.players = sorted(
+            self.players, key=lambda x: x.get('score'), reverse=True)
 
     def split_players(self):
         """Split player in 2 halves (top and bottom players)"""

@@ -55,7 +55,8 @@ class TournamentController:
 
         for i in range(t.rounds_total):
             r.get_match_pairing(top_players[i], bottom_players[i])
-            top_players[i], bottom_players[i] = self.update_opponents(top_players[i], bottom_players[i])
+            top_players[i], bottom_players[i] = self.update_opponents(
+                top_players[i], bottom_players[i])
 
         self.round_view.display_matches(r.matches)
 
@@ -89,12 +90,14 @@ class TournamentController:
             if available_list[1]["id"] in available_list[0]["opponents"]:
                 try:
                     available_list, players_added = \
-                        self.match_other_option(available_list, players_added, r)
+                        self.match_other_option(
+                            available_list, players_added, r)
                     t.players = players_added
 
                 except IndexError:
                     available_list, players_added = \
-                        self.match_first_option(available_list, players_added, r)
+                        self.match_first_option(
+                            available_list, players_added, r)
                     t.players = players_added
 
             elif available_list[1]["id"] not in available_list[0]["opponents"]:
@@ -128,7 +131,8 @@ class TournamentController:
         @return: listes mises à jour
         """
         r.get_match_pairing(available_list[0], available_list[1])
-        available_list[0], available_list[1] = self.update_opponents(available_list[0], available_list[1])
+        available_list[0], available_list[1] = self.update_opponents(
+            available_list[0], available_list[1])
 
         available_list, players_added = self.update_player_lists(
             available_list[0],
@@ -148,7 +152,8 @@ class TournamentController:
         @return: updated lists
         """
         r.get_match_pairing(available_list[0], available_list[2])
-        available_list[0], available_list[2] = self.update_opponents(available_list[0], available_list[2])
+        available_list[0], available_list[2] = self.update_opponents(
+            available_list[0], available_list[2])
 
         available_list, players_added = self.update_player_lists(
             available_list[0],

@@ -87,7 +87,8 @@ class Reports:
                 tournaments[i]["start_date"],
                 tournaments[i]["end_date"],
                 tournaments[i]["time_control"],
-                str(tournaments[i]["current_round"]-1) + "/" + str(tournaments[i]["rounds_total"]),
+                str(tournaments[i]["current_round"]-1) +
+                "/" + str(tournaments[i]["rounds_total"]),
                 participants
             ])
 
@@ -147,7 +148,8 @@ class Reports:
         """
         print("\n")
 
-        h_1 = "{}, {} | Description : {}".format(info['name'].upper(), info['location'].title(), info['description'])
+        h_1 = "{}, {} | Description : {}".format(
+            info['name'].upper(), info['location'].title(), info['description'])
         h_2 = "Start date : {} | End date : {} | Time control : {} | Rounds played : {}/{}".format(
             info['start_date'], info['end_date'], info['time_control'], info['current_round'] - 1, info['rounds_total'])
 

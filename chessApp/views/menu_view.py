@@ -26,66 +26,62 @@ class MenuViews:
         print("────────────────────────────────────────────\033[0m")
         print("───── ♟ ♟ ♟ ♟      ECHECS      ♟ ♟ ♟ ♟ ─────")
         print("────────────────────────────────────────────\033[0m")
-        
 
     @staticmethod
     def main_menu():
         print("\n\n\033[1m┌─────── ♛ MENU PRINCIPAL ♛ ───────┐\033[0m\n")
-        print("────────────────────────────────────\033[0m")
+
         print("\033[94m[1] Gestion des tournois\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\033[94m[2] Gestion des joueurs\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\033[94m[3] Gestion des rapports\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\n\033[91m[Q] Quitter le programme\033[0m")
-        print("────────────────────────────────────\033[0m")
-    
+
     @staticmethod
     def gestion_tournois_menu():
         print("\n\n\033[1m┌─────── ♚ GESTION DES TOURNOIS ♚ ───────┐\033[0m\n")
-        print("────────────────────────────────────\033[0m")
+
         print("\033[94m[1] Créer un nouveau tournoi\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\033[94m[2] Reprendre un tournoi commencé\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\n\033[91m[r] Saisir 'r' pour revenir au menu précédent\033[0m")
-        print("────────────────────────────────────\033[0m")
-    
+
     @staticmethod
     def gestion_joueurs_menu():
         print("\n\n\033[1m┌─────── ♝ GESTION DES JOUEURS ♝ ───────┐\033[0m\n")
-        print("────────────────────────────────────\033[0m")
+
         print("\033[94m[1] Créer un nouveau joueur\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\033[94m[2] Modifier un joueur existant\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\n\033[91m[r] Saisir 'r' pour revenir au menu précédent\033[0m")
-        print("────────────────────────────────────\033[0m")
-    
+
     def new_tournament_submenu(self):
         """Displays the new tournament submenu"""
-        print("\n" * 3 + "\033[1m--- Gestion Tournois - ♝ Choisir une option ♝ ---\033[0m\n")
+        print(
+            "\n" * 3 + "\033[1m--- Gestion Tournois - ♝ Choisir une option ♝ ---\033[0m\n")
         print("──\033[0m")
         print("1 - Créer un nouveau tournoi ♜")
-        print("────────────────────────────────────\033[0m")
+
         print("2 - Reprendre un tournoi en cours ♚")
-        print("────────────────────────────────────\033[0m")
+
         # Add more options as needed
         print("Saisir 'r' pour revenir au menu précédent")
-        print("────────────────────────────────────\033[0m")
-    
+
     def new_player_submenu(self):
         """Displays the new player submenu"""
-        print("\n" * 3 + "\033[1m--- Gestion Joueurs - ♝ Choisir une option ♝ ---\033[0m\n")
+        print(
+            "\n" * 3 + "\033[1m--- Gestion Joueurs - ♝ Choisir une option ♝ ---\033[0m\n")
         print("──\033[0m")
         print("1 - Ajouter un nouveau joueur ♛")
-        print("────────────────────────────────────\033[0m")
+
         print("2 - Mettre à jour un joueur existant ♞")
-        print("────────────────────────────────────\033[0m")
+
         # Add more options as needed
         print("Saisir la touche 'r' pour revenir au menu précédent")
-        print("────────────────────────────────────\033[0m")
 
     @staticmethod
     def create_tournament_header():
@@ -96,13 +92,12 @@ class MenuViews:
         print("\n\033[96mChoisir la durée :\033[0m")
         print("──\033[0m")
         print("\033[94m[1] Bullet\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\033[94m[2] Blitz\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\033[94m[3] Rapid\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\n\033[91m[r] Saisir 'r' pour revenir au menu précédent\033[0m")
-        print("────────────────────────────────────\033[0m")
 
     @staticmethod
     def review_tournament(info, players):
@@ -112,42 +107,42 @@ class MenuViews:
         @param players: list of selected players
         """
         print("\n\n\033[1mUn nouveau tournoi a été enregistré :\033[0m\n")
-        print("────────────────────────────────────\033[0m")
-        print(f"\033[96m{info[0].upper()}, {info[1].title()}\033[0m", end=' | ')
-        print("────────────────────────────────────\033[0m")
+
+        print(
+            f"\033[96m{info[0].upper()}, {info[1].title()}\033[0m", end=' | ')
+
         print(f"Description : {info[2]}", end=' | ')
-        print("────────────────────────────────────\033[0m")
+
         print("\033[94mRounds : 4\033[0m", end=' | ')
-        print("────────────────────────────────────\033[0m")
+
         print(f"Durée : {info[3]}")
-        print("────────────────────────────────────\033[0m")
+
         print("\n\033[1mPlayers (8 total) :\033[0m\n")
-        print("────────────────────────────────────\033[0m")
 
         for item in players:
-            print(f"\033[95mPlayer {players.index(item) + 1} : \033[0m", end='')
-            print("────────────────────────────────────\033[0m")
+            print(
+                f"\033[95mPlayer {players.index(item) + 1} : \033[0m", end='')
+
             print(f"{item['id']}", end=' | ')
-            print("────────────────────────────────────\033[0m")
-            print(f"\033[96m{item['last_name']}, {item['first_name']}\033[0m", end=' | ')
-            print("────────────────────────────────────\033[0m")
+
+            print(
+                f"\033[96m{item['last_name']}, {item['first_name']}\033[0m", end=' | ')
+
             print(f"{item['date_of_birth']}", end=' | ')
-            print("────────────────────────────────────\033[0m")
+
             print(f"\033[93mRank : {item['rank']}\033[0m")
-            print("────────────────────────────────────\033[0m")
-        print("────────────────────────────────────\033[0m")
-        print("\n\033[92mEnregistrer dans la base de donnée ? [o/n] \033[0m", end='')
-        print("────────────────────────────────────\033[0m")
+
+        print(
+            "\n\033[92mEnregistrer dans la base de donnée ? [o/n] \033[0m", end='')
 
     @staticmethod
     def tournament_saved():
-        print("\n\033[92mLe Tournoi a été enregistré dans la base de donnée avec succès !\033[0m")
-        print("────────────────────────────────────\033[0m")
+        print(
+            "\n\033[92mLe Tournoi a été enregistré dans la base de donnée avec succès !\033[0m")
 
     @staticmethod
     def start_tournament_prompt():
         print("\n\033[96mCommencer maintenant ? [o/n] \033[0m", end='')
-        print("────────────────────────────────────\033[0m")
 
     @staticmethod
     def select_players(players, player_number):
@@ -157,19 +152,19 @@ class MenuViews:
         @param player_number: number of current player for new tournament (if editing player == "")
         """
         print(f"\n\033[96mSélectionner joueur {player_number} :\033[0m\n")
-        print("────────────────────────────────────\033[0m")
+
         for i in range(len(players)):
             print(f"\033[94m[{players[i]['id']}]\033[0m", end=' ')
-            print("────────────────────────────────────\033[0m")
-            print(f"\033[96m{players[i]['last_name']}, {players[i]['first_name']}\033[0m", end=" | ")
-            print("────────────────────────────────────\033[0m")
-            print(f"{players[i]['gender']} | {players[i]['date_of_birth']}", end=" | ")
-            print("────────────────────────────────────\033[0m")
+
+            print(
+                f"\033[96m{players[i]['last_name']}, {players[i]['first_name']}\033[0m", end=" | ")
+
+            print(
+                f"{players[i]['gender']} | {players[i]['date_of_birth']}", end=" | ")
+
             print(f"\033[93mRank : {players[i]['rank']}\033[0m")
-            print("────────────────────────────────────\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("Saisir 'r' pour revenir au menu précédent")
-        print("────────────────────────────────────\033[0m")
 
     @staticmethod
     def select_tournament(tournaments):
@@ -186,7 +181,8 @@ class MenuViews:
             print(tournaments[i]['description'], end=' | ')
             print(f"Started on : {tournaments[i]['start_date']}", end=' | ')
             print(f"Ended on : {tournaments[i]['end_date']}", end=' | ')
-            print(f"\033[93mRound {tournaments[i]['current_round']-1}/{tournaments[i]['rounds_total']}\033[0m")
+            print(
+                f"\033[93mRound {tournaments[i]['current_round']-1}/{tournaments[i]['rounds_total']}\033[0m")
 
         print("\n\033[91m[r] Saisir 'r' pour revenir au menu précédent\033[0m")
 
@@ -205,7 +201,8 @@ class MenuViews:
         print(f"Date de naissance : {info[2]}", end=' | ')
         print(f"Genre : {info[3]}", end=' | ')
         print(f"\033[93mRang : {info[4]}\033[0m")
-        print("\n\033[92mEnregistrer dans la base de donnée ? [o/n] \033[0m", end='')
+        print(
+            "\n\033[92mEnregistrer dans la base de donnée ? [o/n] \033[0m", end='')
 
     @staticmethod
     def update_player_info(p, options):
@@ -223,79 +220,81 @@ class MenuViews:
 
     @staticmethod
     def player_saved():
-        print("\n\033[92mJoueur enregistré dans la base de donnée avec succès !\033[0m")
+        print(
+            "\n\033[92mJoueur enregistré dans la base de donnée avec succès !\033[0m")
 
     @staticmethod
     def reports_menu():
-        print("\n" * 3 + "\033[1m--- RAPPORTS - ♝ Choisir une option ♝ ---\033[0m\n")
+        print(
+            "\n" * 3 + "\033[1m--- RAPPORTS - ♝ Choisir une option ♝ ---\033[0m\n")
         print("──\033[0m")
         print("\033[94m[1] Afficher tous les joueurs ♝\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\033[94m[2] Afficher tous les joueurs par tournoi\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\033[94m[3] Afficher tous les tournois\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\033[94m[4] Afficher tous les rounds dans un tournoi\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\033[94m[5] Afficher toutes les parties dans un tournoi\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\n\033[91m[r] Saisir 'r' pour revenir au menu précédent\033[0m")
-        print("────────────────────────────────────\033[0m")
 
     @staticmethod
     def reports_player_sorting():
-        print("────────────────────────────────────\033[0m")
+
         print("\n\033[96m[1] Classer par nom\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\033[96m[2] Classer par rang\033[0m")
-        print("────────────────────────────────────\033[0m")
+
         print("\n\033[91m[r] Saisir 'r' pour revenir au menu précédent\033[0m")
-        print("────────────────────────────────────\033[0m")
 
     @staticmethod
     def input_prompt_text(option):
-        print("────────────────────────────────────\033[0m")
-        print(f"\n\033[96mChoisir {option} (Saisir [r] pour revenir au menu précédent) : \033[0m", end='')
+
+        print(
+            f"\n\033[96mChoisir {option} (Saisir [r] pour revenir au menu précédent) : \033[0m", end='')
         print("──\033[0m")
-    
+
     @staticmethod
     def input_prompt():
-        print("────────────────────────────────────\033[0m")
-        print("\n\033[96mChoisir [option] et utiliser la touche ENTREE pour valider ! : \033[0m", end='')
+
+        print(
+            "\n\033[96mChoisir [option] et utiliser la touche ENTREE pour valider ! : \033[0m", end='')
         print("──\033[0m")
-    
+
     @staticmethod
     def are_you_sure_exit():
-        print("────────────────────────────────────\033[0m")
-        print("\n\033[91mSouhaitez-vous vraiment quitter cette application ? [o/n] \033[0m", end='')
+
+        print(
+            "\n\033[91mSouhaitez-vous vraiment quitter cette application ? [o/n] \033[0m", end='')
         print("──\033[0m")
-    
+
     @staticmethod
     def input_error():
-        print("────────────────────────────────────\033[0m")
-        print("\n\033[91mErreur de saisie, merci de choisir une option valide.\033[0m")
+
+        print(
+            "\n\033[91mErreur de saisie, merci de choisir une option valide.\033[0m")
         print("──\033[0m")
-        
+
     @staticmethod
     def player_already_selected():
-        print("────────────────────────────────────\033[0m")
-        print("\n\033[91mCe joueur a déjà été sélectionné. Merci de sélectionner un autre joueur.\033[0m")
-        print("────────────────────────────────────\033[0m")
-        
+
+        print(
+            "\n\033[91mCe joueur a déjà été sélectionné. Merci de sélectionner un autre joueur.\033[0m")
+
     @staticmethod
     def other_report():
-        print("────────────────────────────────────\033[0m")
-        print("\n\033[96mSouhaitez-vous consulter un autre rapport ? [o/n] \033[0m", end='')
-        print("────────────────────────────────────\033[0m")
-        
+
+        print(
+            "\n\033[96mSouhaitez-vous consulter un autre rapport ? [o/n] \033[0m", end='')
+
     @staticmethod
     def update_rank():
-        print("────────────────────────────────────\033[0m")
+
         print("\n\033[92mMettre à jour les rangs ? [o/n] \033[0m", end='')
-        print("────────────────────────────────────\033[0m")
-        
+
     @staticmethod
     def rank_update_header(player):
-        print("────────────────────────────────────\033[0m")
+
         print(f"\nMise à jour {player.last_name}, {player.first_name}")
-        print("────────────────────────────────────\033[0m")

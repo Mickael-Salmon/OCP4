@@ -41,7 +41,7 @@ class MenuController:
         else:
             self.menu_view.input_error()
             self.main_menu_start()
-    
+
     def new_tournament_submenu(self):
         """Affiche le nouveau sous-menu de tournoi"""
 
@@ -55,7 +55,7 @@ class MenuController:
         elif user_input == "2":
             # Call the method to handle the second option
             self.resume_tournament()
-            
+
         # Other options...
 
         elif user_input == "r":
@@ -64,7 +64,7 @@ class MenuController:
         else:
             self.menu_view.input_error()
             self.new_tournament_submenu()
-            
+
     def new_player_submenu(self):
         """Affiche le nouveau sous-menu de joueur"""
 
@@ -78,7 +78,7 @@ class MenuController:
         elif user_input == "2":
             # Call the method to handle the second option
             self.update_player()
-            
+
         # Other options...
 
         elif user_input == "r":
@@ -375,7 +375,7 @@ class MenuController:
 
         elif user_input == "r":
             self.main_menu_start()
-    
+
     def new_menu(self):
         """Logique de contrôle du nouveau menu"""
         # Votre logique de contrôle du nouveau menu

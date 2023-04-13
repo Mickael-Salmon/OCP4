@@ -59,7 +59,8 @@ class RoundViews:
 
         print("\n\n- FINAL SCORES -\n")
         print(f"{t.name.upper()}, {t.location.title()} | Description : {t.description}")
-        print(f"Start : {t.start_date} | End : {t.end_date} | Time control : {t.time_control}\n")
+        print(
+            f"Start : {t.start_date} | End : {t.end_date} | Time control : {t.time_control}\n")
 
         print(self.table)
 
