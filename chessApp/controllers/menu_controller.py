@@ -289,11 +289,11 @@ class MenuController:
         )
 
         options = [
-            "last name",
-            "first name",
-            "birthdate",
-            "gender",
-            "rank"
+            "Nom",
+            "Prénom",
+            "Date de naissance",
+            "Genre",
+            "Rang"
         ]
         self.menu_view.update_player_info(p, options)
         self.menu_view.input_prompt()
