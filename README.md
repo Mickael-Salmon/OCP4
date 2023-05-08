@@ -58,11 +58,11 @@ Elie, votre amie et elle aussi développeuse Python, est membre du club d'échec
 
 Les fichiers `__init__.py` sont nécessaires pour que Python reconnaisse le dossier comme un module.
 
-Dans le dossier `controllers`, vous pouvez placer tous les fichiers contenant la logique de contrôle, tels que la gestion des tournois, la génération de rapports et le menu principal.
+Dans le dossier `controllers`, contient la logique de contrôle, tels que la gestion des tournois, la génération de rapports et le menu principal.
 
-Le dossier `models` peut contenir les modèles pour les entités dans votre programme, tels que les tournois, les rondes et les joueurs.
+Le dossier `models` contient les modèles pour les entités dans votre programme, tels que les tournois, les rondes et les joueurs.
 
-Le dossier `views` peut contenir tous les fichiers qui concernent l'interface utilisateur, tels que les vues pour les rondes, les rapports et le menu principal.
+Le dossier `views` contient tous les fichiers qui concernent l'interface utilisateur, tels que les vues pour les rondes, les rapports et le menu principal.
 
 
 <h2> Installation et démarrage du projet</h2> 
