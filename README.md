@@ -99,9 +99,9 @@ $ git clone https://github.com/MicSa/OCP4/
 
 <h3>Activer l'environnement virtuel </h3>
 
-$ cd OCP4
-$ python3 -m venv venvOCP4 
-$ source env/bin/activate
+$ cd OCP4 </br>
+$ python3 -m venv venvOCP4 </br>
+$ source env/bin/activate </br>
 
 <h3>Installer les paquets requis </h3>
 
