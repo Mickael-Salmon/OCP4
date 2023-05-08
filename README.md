@@ -40,30 +40,33 @@ Elie, votre amie et elle aussi développeuse Python, est membre du club d'échec
 ```
 ├── controllers
 │   ├── __init__.py
-│   ├── tournoi.py
-│   ├── rapports.py
-│   └── menu.py
+│   ├── menu_controller.py
+│   ├── reports_controller.py
+│   └── tournament_controller.py
 ├── models
 │   ├── __init__.py
-│   ├── tournoi.py
-│   ├── round.py
-│   └── joueur.py
+│   ├── player_model.py
+│   ├── round_model.py
+│   └── tournament_model.py
 └── views
-    ├── __init__.py
-    ├── round.py
-    ├── rapports.py
-    └── menu.py
+│   ├── __init__.py
+│   ├── menu_view.py
+│   ├── reports_view.py
+│   └── round_view.py
+└── database
+│   ├── players.json
+│   ├── tournaments.json
 
 ```
 
 Les fichiers `__init__.py` sont nécessaires pour que Python reconnaisse le dossier comme un module.
 
-Dans le dossier `controllers`, contient la logique de contrôle, tels que la gestion des tournois, la génération de rapports et le menu principal.
+Le dossier `controllers`, contient la logique de contrôle, tels que la gestion des tournois, la génération de rapports et le menu principal.
 
 Le dossier `models` contient les modèles pour les entités dans votre programme, tels que les tournois, les rondes et les joueurs.
 
 Le dossier `views` contient tous les fichiers qui concernent l'interface utilisateur, tels que les vues pour les rondes, les rapports et le menu principal.
-
+Le dossier `database` contient tous les fichiers relatifs aux stockage d'information pour les joueurs et les tournois par TinyDB au format JSON.
 
 <h2> Installation et démarrage du projet</h2> 
 <h3>Windows  </h3> 
