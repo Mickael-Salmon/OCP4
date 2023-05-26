@@ -13,6 +13,13 @@ class MenuViews:
         print("────────────────────────────────────────────\033[0m")
         print("───── ♟ ♟ ♟ ♟      ECHECS      ♟ ♟ ♟ ♟ ─────")
         print("────────────────────────────────────────────\033[0m")
+    
+    # Cette version utilise un dictionnaire pour stocker les options du menu 
+    # ce qui rend la fonction plus concise et plus facile à modifier à l'avenir. 
+    # Chaque clé correspond à une option du menu et chaque valeur correspond à la description de l'option. 
+    # La boucle for parcourt le dictionnaire et imprime chaque option avec sa description. 
+    # Le code de couleur est défini en fonction de la clé 
+    # Si c'est 'Q', le code de couleur rouge est utilisé, sinon le code de couleur bleu est utilisé).
 
     @staticmethod
     def main_menu():
