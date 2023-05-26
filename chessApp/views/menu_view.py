@@ -39,47 +39,63 @@ class MenuViews:
 
     @staticmethod
     def gestion_tournois_menu():
+        menu_options = {
+            '1': 'Créer un nouveau tournoi',
+            '2': 'Reprendre un tournoi commencé',
+            'r': 'Saisir \'r\' pour revenir au menu précédent'
+        }
+        
         print("\n\n\033[1m┌─────── ♚ GESTION DES TOURNOIS ♚ ───────┐\033[0m\n")
+        
+        for key, value in menu_options.items():
+            color_code = '\033[94m' if key != 'r' else '\033[91m'
+            print(f"{color_code}[{key}] {value}\033[0m")
 
-        print("\033[94m[1] Créer un nouveau tournoi\033[0m")
-
-        print("\033[94m[2] Reprendre un tournoi commencé\033[0m")
-
-        print("\n\033[91m[r] Saisir 'r' pour revenir au menu précédent\033[0m")
 
     @staticmethod
     def gestion_joueurs_menu():
+        menu_options = {
+            '1': 'Créer un nouveau joueur',
+            '2': 'Modifier un joueur existant',
+            'r': 'Saisir \'r\' pour revenir au menu précédent'
+        }
+        
         print("\n\n\033[1m┌─────── ♝ GESTION DES JOUEURS ♝ ───────┐\033[0m\n")
+        
+        for key, value in menu_options.items():
+            color_code = '\033[94m' if key != 'r' else '\033[91m'
+            print(f"{color_code}[{key}] {value}\033[0m")
 
-        print("\033[94m[1] Créer un nouveau joueur\033[0m")
-
-        print("\033[94m[2] Modifier un joueur existant\033[0m")
-
-        print("\n\033[91m[r] Saisir 'r' pour revenir au menu précédent\033[0m")
 
     def new_tournament_submenu(self):
         """Displays the new tournament submenu"""
-        print(
-            "\n" * 3 + "\033[1m--- Gestion Tournois - ♝ Choisir une option ♝ ---\033[0m\n")
+        menu_options = {
+            '1': 'Créer un nouveau tournoi ♜',
+            '2': 'Reprendre un tournoi en cours ♚',
+            'r': 'Saisir \'r\' pour revenir au menu précédent'
+        }
+        
+        print("\n" * 3 + "\033[1m--- Gestion Tournois - ♝ Choisir une option ♝ ---\033[0m\n")
         print("──\033[0m")
-        print("1 - Créer un nouveau tournoi ♜")
+        
+        for key, value in menu_options.items():
+            print(f"{key} - {value}")
 
-        print("2 - Reprendre un tournoi en cours ♚")
-
-        # Add more options as needed
-        print("Saisir 'r' pour revenir au menu précédent")
 
     def new_player_submenu(self):
         """Displays the new player submenu"""
-        print(
-            "\n" * 3 + "\033[1m--- Gestion Joueurs - ♝ Choisir une option ♝ ---\033[0m\n")
+        menu_options = {
+            '1': 'Ajouter un nouveau joueur ♛',
+            '2': 'Mettre à jour un joueur existant ♞',
+            'r': 'Saisir la touche \'r\' pour revenir au menu précédent'
+        }
+        
+        print("\n" * 3 + "\033[1m--- Gestion Joueurs - ♝ Choisir une option ♝ ---\033[0m\n")
         print("──\033[0m")
-        print("1 - Ajouter un nouveau joueur ♛")
+        
+        for key, value in menu_options.items():
+            print(f"{key} - {value}")
 
-        print("2 - Mettre à jour un joueur existant ♞")
-
-        # Add more options as needed
-        print("Saisir la touche 'r' pour revenir au menu précédent")
 
     @staticmethod
     def create_tournament_header():
