@@ -4,7 +4,9 @@ from chessApp.models.player_model import Player
 from chessApp.models.round_model import Round
 from chessApp.views.round_view import RoundViews
 from chessApp.views.menu_view import MenuViews
+from chessApp.controllers.user_Input_validation import UserInputValidation
 
+prompt = "Entrer le numéro correspondant à l'option souhaitée.\n" \
 
 class TournamentController:
 
@@ -62,7 +64,7 @@ class TournamentController:
 
         self.round_view.round_over()
         self.menu_view.input_prompt()
-        user_input = input().lower()
+        user_input = UserInputValidation.get_validated_input(prompt)
         scores_list = []
 
         if user_input == "ok":
@@ -111,7 +113,7 @@ class TournamentController:
 
         self.round_view.round_over()
         self.menu_view.input_prompt()
-        user_input = input().lower()
+        user_input = UserInputValidation.get_validated_input(prompt)
         scores_list = []
 
         if user_input == "ok":
@@ -258,7 +260,7 @@ class TournamentController:
         self.round_view.display_results(t)
 
         self.menu_view.update_rank()
-        user_input = input()
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         players = t.players
 
@@ -276,7 +278,7 @@ class TournamentController:
         """
         self.menu_view.select_players(players, "to update")
         self.menu_view.input_prompt()
-        user_input = input()
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         if user_input == "back":
             self.back_to_menu()
@@ -295,7 +297,7 @@ class TournamentController:
 
                 self.menu_view.rank_update_header(p)
                 self.menu_view.input_prompt_text("new rank")
-                user_input = input()
+                user_input = UserInputValidation.get_validated_input(prompt)
 
                 if user_input == "back":
                     self.back_to_menu()

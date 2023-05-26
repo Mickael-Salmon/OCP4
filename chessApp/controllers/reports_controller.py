@@ -1,8 +1,10 @@
 from chessApp.models.tournament_model import Tournament
 from chessApp.views.menu_view import MenuViews
 from chessApp.views.reports_view import Reports
+from chessApp.controllers.user_Input_validation import UserInputValidation
 
-
+prompt = "Le chiffre du menu correspond au rapport que vous souhaitez afficher.\n" \
+    
 class ReportsController:
 
     def __init__(self):
@@ -74,7 +76,7 @@ class ReportsController:
         tournaments = Tournament.load_tournament_db()
         self.menu_view.select_tournament(tournaments)
         self.menu_view.input_prompt()
-        user_input = input()
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         if user_input == "r":
             self.back_to_menu()

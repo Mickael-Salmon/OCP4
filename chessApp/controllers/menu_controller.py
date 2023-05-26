@@ -3,7 +3,9 @@ from chessApp.controllers.tournament_controller import TournamentController
 from chessApp.models.player_model import Player
 from chessApp.models.tournament_model import Tournament
 from chessApp.views.menu_view import MenuViews
+from chessApp.controllers.user_Input_validation import UserInputValidation
 
+prompt = "Entrer le numéro correspondant à l'option souhaitée.\n" \
 
 class MenuController:
 
@@ -18,7 +20,8 @@ class MenuController:
 
         self.menu_view.main_menu()
         self.menu_view.input_prompt()
-        user_input = input().lower()
+        prompt = "Veuillez entrer un numéro d'option : "
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         if user_input == "1":
             self.new_tournament_submenu()
@@ -31,7 +34,7 @@ class MenuController:
 
         elif user_input == "Q" or user_input == "q":
             self.menu_view.are_you_sure_exit()
-            user_input = input().lower()
+            user_input = UserInputValidation.get_validated_input(prompt)
 
             if user_input == "o":
                 exit()
@@ -47,7 +50,7 @@ class MenuController:
 
         self.menu_view.new_tournament_submenu()
         self.menu_view.input_prompt()
-        user_input = input().lower()
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         if user_input == "1":
             self.new_tournament()
@@ -70,7 +73,7 @@ class MenuController:
 
         self.menu_view.new_player_submenu()
         self.menu_view.input_prompt()
-        user_input = input().lower()
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         if user_input == "1":
             self.new_player()
@@ -100,7 +103,7 @@ class MenuController:
 
         for item in options:
             self.menu_view.input_prompt_text(item)
-            user_input = input()
+            user_input = UserInputValidation.get_validated_input(prompt)
 
             if user_input == "r":
                 self.main_menu_start()
@@ -112,7 +115,7 @@ class MenuController:
         tour_players = self.select_players(8)
 
         self.menu_view.review_tournament(tournament_info, tour_players)
-        user_input = input().lower()
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         if user_input == "o":
             tournament = Tournament(
@@ -131,7 +134,7 @@ class MenuController:
             self.menu_view.tournament_saved()
 
             self.menu_view.start_tournament_prompt()
-            user_input = input()
+            user_input = UserInputValidation.get_validated_input(prompt)
 
             if user_input == "o":
                 self.tour_cont.start_tournament(tournament)
@@ -148,7 +151,7 @@ class MenuController:
         """
         self.menu_view.time_control_options()
         self.menu_view.input_prompt()
-        user_input = input()
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         if user_input == "1":
             return "Classique"
@@ -205,7 +208,7 @@ class MenuController:
 
         self.menu_view.select_tournament(tournament_list)
         self.menu_view.input_prompt()
-        user_input = input()
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         if user_input == "r":
             self.main_menu_start()
@@ -248,7 +251,7 @@ class MenuController:
                 player_info.append(user_input)
 
         MenuViews.review_player(player_info)
-        user_input = input().lower()
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         if user_input == "o":
             player = Player(
@@ -273,7 +276,7 @@ class MenuController:
 
         self.menu_view.select_players(players, "to update")
         self.menu_view.input_prompt()
-        user_input = input()
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         if user_input == "r":
             self.main_menu_start()
@@ -297,7 +300,7 @@ class MenuController:
         ]
         self.menu_view.update_player_info(p, options)
         self.menu_view.input_prompt()
-        user_input = input()
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         if user_input == "r":
             self.main_menu_start()
@@ -306,7 +309,7 @@ class MenuController:
             updated_info = (options[int(user_input) - 1]).replace(" ", "_")
             self.menu_view.input_prompt_text(
                 f"new {options[int(user_input) - 1]}")
-            user_input = input()
+            user_input = UserInputValidation.get_validated_input(prompt)
 
             if user_input == "r":
                 self.main_menu_start()
@@ -325,7 +328,7 @@ class MenuController:
         """Rapports Sélecteur de menu"""
         self.menu_view.reports_menu()
         self.menu_view.input_prompt()
-        user_input = input()
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         if user_input == "1":
             self.player_reports_sorting(Player.load_player_db())
@@ -350,7 +353,7 @@ class MenuController:
             self.reports_menu()
 
         self.menu_view.other_report()
-        user_input = input()
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         if user_input == "o":
             self.reports_menu()
@@ -365,7 +368,7 @@ class MenuController:
         """
         self.menu_view.reports_player_sorting()
         self.menu_view.input_prompt()
-        user_input = input()
+        user_input = UserInputValidation.get_validated_input(prompt)
 
         if user_input == "1":
             self.reports_cont.all_players_name(players)
