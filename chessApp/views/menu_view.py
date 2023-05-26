@@ -3,19 +3,6 @@ class MenuViews:
     def __init__(self):
         pass
 
-    # @staticmethod
-    # def chess_ascii_art():
-    #     print("\033[96m")
-    #     print("♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜")
-    #     print("♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟")
-    #     print("· · · · · · · ·")
-    #     print("· · · · · · · ·")
-    #     print("· · · · · · · ·")
-    #     print("· · · · · · · ·")
-    #     print("♙ ♙ ♙ ♙ ♙ ♙ ♙ ♙")
-    #     print("♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖")
-    #     print("\033[0m")
-
     @staticmethod
     def app_title():
         MenuViews()
@@ -29,15 +16,19 @@ class MenuViews:
 
     @staticmethod
     def main_menu():
+        menu_options = {
+            '1': 'Gestion des tournois',
+            '2': 'Gestion des joueurs',
+            '3': 'Gestion des rapports',
+            'Q': 'Quitter le programme'
+        }
+        
         print("\n\n\033[1m┌─────── ♛ MENU PRINCIPAL ♛ ───────┐\033[0m\n")
+        
+        for key, value in menu_options.items():
+            color_code = '\033[94m' if key != 'Q' else '\033[91m'
+            print(f"{color_code}[{key}] {value}\033[0m")
 
-        print("\033[94m[1] Gestion des tournois\033[0m")
-
-        print("\033[94m[2] Gestion des joueurs\033[0m")
-
-        print("\033[94m[3] Gestion des rapports\033[0m")
-
-        print("\n\033[91m[Q] Quitter le programme\033[0m")
 
     @staticmethod
     def gestion_tournois_menu():

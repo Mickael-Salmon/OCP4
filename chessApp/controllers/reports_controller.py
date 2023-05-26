@@ -3,7 +3,7 @@ from chessApp.views.menu_view import MenuViews
 from chessApp.views.reports_view import Reports
 from chessApp.controllers.user_Input_validation import UserInputValidation
 
-prompt = "Le chiffre du menu correspond au rapport que vous souhaitez afficher.\n" \
+prompt = "♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜.\n" \
     
 class ReportsController:
 
