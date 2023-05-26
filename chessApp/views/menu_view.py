@@ -150,8 +150,10 @@ class MenuViews:
         print(f"\n\033[96mSélectionner joueur {player_number} :\033[0m\n")
         for i in range(len(players)):
             player_id = f"\033[94m[{players[i]['id']}]\033[0m"
-            player_name = f"{players[i]['last_name']},{players[i]['first_name']}"
-            player_gender_dob = f"{players[i]['gender']} | {players[i]['date_of_birth']}"
+            player_name = (
+                f"{players[i]['last_name']}, {players[i]['first_name']}")
+            player_gender_dob = (
+                f"{players[i]['gender']} | {players[i]['date_of_birth']}")
             player_rank = f"\033[93mRank : {players[i]['rank']}\033[0m"
 
             print(player_id, end=' ')
