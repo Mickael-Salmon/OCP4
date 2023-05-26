@@ -103,15 +103,20 @@ class MenuViews:
 
     @staticmethod
     def time_control_options():
+        menu_options = {
+            '1': 'Bullet',
+            '2': 'Blitz',
+            '3': 'Rapid',
+            'r': 'Saisir \'r\' pour revenir au menu précédent'
+        }
+
         print("\n\033[96mChoisir la durée :\033[0m")
         print("──\033[0m")
-        print("\033[94m[1] Bullet\033[0m")
 
-        print("\033[94m[2] Blitz\033[0m")
+        for key, value in menu_options.items():
+            color_code = '\033[94m' if key != 'r' else '\033[91m'
+            print(f"{color_code}[{key}] {value}\033[0m")
 
-        print("\033[94m[3] Rapid\033[0m")
-
-        print("\n\033[91m[r] Saisir 'r' pour revenir au menu précédent\033[0m")
 
     @staticmethod
     def review_tournament(info, players):
