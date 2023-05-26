@@ -76,7 +76,7 @@ class MenuViews:
         }
         
         print("\n" * 3 + "\033[1m--- Gestion Tournois - ♝ Choisir une option ♝ ---\033[0m\n")
-        print("──\033[0m")
+        
         
         for key, value in menu_options.items():
             print(f"{key} - {value}")
@@ -91,7 +91,7 @@ class MenuViews:
         }
         
         print("\n" * 3 + "\033[1m--- Gestion Joueurs - ♝ Choisir une option ♝ ---\033[0m\n")
-        print("──\033[0m")
+        
         
         for key, value in menu_options.items():
             print(f"{key} - {value}")
@@ -111,7 +111,7 @@ class MenuViews:
         }
 
         print("\n\033[96mChoisir la durée :\033[0m")
-        print("──\033[0m")
+        
 
         for key, value in menu_options.items():
             color_code = '\033[94m' if key != 'r' else '\033[91m'
@@ -244,7 +244,7 @@ class MenuViews:
     def reports_menu():
         print(
             "\n" * 3 + "\033[1m--- RAPPORTS - ♝ Choisir une option ♝ ---\033[0m\n")
-        print("──\033[0m")
+        
         print("\033[94m[1] Afficher tous les joueurs ♝\033[0m")
 
         print("\033[94m[2] Afficher tous les joueurs par tournoi\033[0m")
@@ -271,28 +271,28 @@ class MenuViews:
 
         print(
             f"\n\033[96mChoisir {option} (Saisir [r] pour revenir au menu précédent) : \033[0m", end='')
-        print("──\033[0m")
+        
 
     @staticmethod
     def input_prompt():
 
         print(
             "\n\033[96mChoisir [option] et utiliser la touche ENTREE pour valider ! : \033[0m", end='')
-        print("──\033[0m")
+        
 
     @staticmethod
     def are_you_sure_exit():
 
         print(
             "\n\033[91mSouhaitez-vous vraiment quitter cette application ? [o/n] \033[0m", end='')
-        print("──\033[0m")
+        
 
     @staticmethod
     def input_error():
 
         print(
             "\n\033[91mErreur de saisie, merci de choisir une option valide.\033[0m")
-        print("──\033[0m")
+        
 
     @staticmethod
     def player_already_selected():
