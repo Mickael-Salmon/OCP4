@@ -126,33 +126,30 @@ class MenuViews:
         @param players: list of selected players
         """
         print("\n\n\033[1mUn nouveau tournoi a été enregistré :\033[0m\n")
-
-        print(
-            f"\033[96m{info[0].upper()}, {info[1].title()}\033[0m", end=' | ')
-
-        print(f"Description : {info[2]}", end=' | ')
-
-        print("\033[94mRounds : 4\033[0m", end=' | ')
-
-        print(f"Durée : {info[3]}")
+        
+        tournament_info = [
+            f"\033[96m{info[0].upper()}, {info[1].title()}\033[0m",
+            f"Description : {info[2]}",
+            "\033[94mRounds : 4\033[0m",
+            f"Durée : {info[3]}"
+        ]
+        print(" | ".join(tournament_info))
 
         print("\n\033[1mPlayers (8 total) :\033[0m\n")
 
+        player_info_keys = ['id', 'last_name', 'first_name', 'date_of_birth', 'rank']
         for item in players:
-            print(
-                f"\033[95mPlayer {players.index(item) + 1} : \033[0m", end='')
+            player_info = [
+                f"\033[95mPlayer {players.index(item) + 1} : \033[0m",
+                f"{item['id']}",
+                f"\033[96m{item['last_name']}, {item['first_name']}\033[0m",
+                f"{item['date_of_birth']}",
+                f"\033[93mRank : {item['rank']}\033[0m"
+            ]
+            print(" | ".join(player_info))
 
-            print(f"{item['id']}", end=' | ')
+        print("\n\033[92mEnregistrer dans la base de donnée ? [o/n] \033[0m", end='')
 
-            print(
-                f"\033[96m{item['last_name']}, {item['first_name']}\033[0m", end=' | ')
-
-            print(f"{item['date_of_birth']}", end=' | ')
-
-            print(f"\033[93mRank : {item['rank']}\033[0m")
-
-        print(
-            "\n\033[92mEnregistrer dans la base de donnée ? [o/n] \033[0m", end='')
 
     @staticmethod
     def tournament_saved():
