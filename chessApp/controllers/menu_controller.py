@@ -5,7 +5,7 @@ from chessApp.models.tournament_model import Tournament
 from chessApp.views.menu_view import MenuViews
 from chessApp.controllers.user_Input_validation import UserInputValidation
 
-prompt = "♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜.\n" \
+prompt = "...\n" \
 
 class MenuController:
 
