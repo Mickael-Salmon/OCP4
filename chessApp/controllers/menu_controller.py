@@ -7,6 +7,8 @@ from chessApp.controllers.user_Input_validation import UserInputValidation
 
 prompt = "...\n" \
 
+
+
 class MenuController:
 
     def __init__(self):
@@ -166,8 +168,7 @@ class MenuController:
             self.input_time_control()
 
     def select_players(self, players_total):
-        """Sélectionnez des joueurs pour le nouveau tournoinouveau tournoinouveau tournoinouveau tournoinouveau tournoi
-
+        """Sélectionnez des joueurs pour le nouveau tournoi
         @param players_total: nombre de joueurs (int)
         @return: Liste des joueurs sélectionnés
         """

@@ -8,6 +8,8 @@ from chessApp.controllers.user_Input_validation import UserInputValidation
 
 prompt = "...\n" \
 
+
+
 class TournamentController:
 
     def __init__(self):
@@ -18,7 +20,8 @@ class TournamentController:
 
     def start_tournament(self, t):
         """Tournoi (T) Structure principale
-        Commencez à partir du premier tour ou du tournoi de CV en fonction du numéro de rond
+        Commencez à partir du premier tour ou du tournoi
+        en fonction du numéro de round
         Définissez les minuteries de démarrage et de fin et enregistrer sur DB
         """
         if t.current_round == 1:
@@ -127,8 +130,8 @@ class TournamentController:
     def match_first_option(self, available_list, players_added, r):
         """Option d'appariement principal
 
-        @param disponible_list: liste des joueurs qui ne sont pas définis pour le tour actuel
-        @Param Players_Added: Liste des joueurs déjà en match pour le tour actuel
+        @param disponible_list: Liste des joueurs non définis
+        @Param Players_Added: Liste des joueurs déjà en match
         @param r: rond actuel
         @return: listes mises à jour
         """
@@ -148,8 +151,8 @@ class TournamentController:
     def match_other_option(self, available_list, players_added, r):
         """Alternative pairing option
 
-        @param available_list: list of players not set in match for current round
-        @param players_added: list of players already in match for current round
+        @param available_list: list of players not set in match
+        @param players_added: list of players already in match
         @param r: current round
         @return: updated lists
         """
@@ -231,8 +234,8 @@ class TournamentController:
 
         @param joueur_1: joueur 1 (dict)
         @param joueur_2: le joueur 2 (dict)
-        @param disponible_list: liste des joueurs qui ne sont pas définis pour le tour actuel
-        @Param Players_Added: Liste des joueurs déjà en match pour le tour actuel
+        @param disponible_list: liste des joueurs non définis
+        @Param Players_Added: Liste des joueurs déjà en match
         @return: liste des joueurs disponibles, liste des joueurs indisponibles
         """
         players_added.extend([player_1, player_2])

@@ -51,16 +51,16 @@ class RoundViews:
 
         for i in range(len(t.players)):
             self.table.add_row([
-                i+1,
+                i + 1,
                 t.players[i]["last_name"] + ", " + t.players[i]["first_name"],
                 t.players[i]["score"],
                 t.players[i]["rank"]
             ])
 
         print("\n\n- FINAL SCORES -\n")
-        print(f"{t.name.upper()}, {t.location.title()} | Description : {t.description}")
-        print(
-            f"Start : {t.start_date} | End : {t.end_date} | Time control : {t.time_control}\n")
+        print(f"{t.name.upper()}, {t.location.title()} | Description:")
+        print(f"{t.description}")
+        print(f"Start: {t.start_date} | End: {t.end_date} | Time control: {t.time_control}\n")
 
         print(self.table)
 
@@ -73,9 +73,12 @@ class RoundViews:
         """
         print("\n\n")
 
-        h_1 = f"{t.name.upper()}, {t.location.title()} | Description : {t.description}"
-        h_2 = f"Start date and time : {t.start_date} | Time control : {t.time_control}\n"
-        h_3 = f"- ROUND {t.current_round}/{t.rounds_total} | {start_time} -"
+        h_1 = "{}, {} | Description: {}".format(
+            t.name.upper(), t.location.title(), t.description)
+        h_2 = "Start date and time: {} | Time control: {}\n".format(
+            t.start_date, t.time_control)
+        h_3 = "- ROUND {}/{} | {} -".format(
+            t.current_round, t.rounds_total, start_time)
 
         print(h_1.center(100, " "))
         print(h_2.center(100, " "))

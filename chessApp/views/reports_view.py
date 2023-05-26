@@ -148,10 +148,15 @@ class Reports:
         """
         print("\n")
 
-        h_1 = "{}, {} | Description : {}".format(
-            info['name'].upper(), info['location'].title(), info['description'])
-        h_2 = "Start date : {} | End date : {} | Time control : {} | Rounds played : {}/{}".format(
-            info['start_date'], info['end_date'], info['time_control'], info['current_round'] - 1, info['rounds_total'])
+        h_1 = "{}, {} | Description: {}".format(
+            info['name'].upper(), info['location'].title(),
+            info['description'])
+        h_2 = (
+            "Start date: {} | End date: {} | Time control: {} | "
+            "Rounds played: {}/{}"
+        ).format(
+            info['start_date'], info['end_date'], info['time_control'],
+            info['current_round'] - 1, info['rounds_total'])
 
         print("=" * 80)
         print(h_1.center(80))

@@ -4,7 +4,9 @@ from chessApp.views.reports_view import Reports
 from chessApp.controllers.user_Input_validation import UserInputValidation
 
 prompt = "....\n" \
-    
+
+
+
 class ReportsController:
 
     def __init__(self):
@@ -41,14 +43,17 @@ class ReportsController:
 
     def all_tournaments(self):
         """Tous les tournois rapportent"""
-        self.reports_view.display_tournaments_report(Tournament.load_tournament_db())
+        self.reports_view.display_tournaments_report(
+            Tournament.load_tournament_db())
 
     def tournament_rounds(self):
         """Tous les rondes d'un tournoi"""
         user_input, tournaments = self.tournament_select()
 
-        self.reports_view.report_header(tournaments[int(user_input) - 1])
-        self.reports_view.display_rounds_report(tournaments[int(user_input) - 1]["rounds"])
+        self.reports_view.report_header(
+            tournaments[int(user_input) - 1])
+        self.reports_view.display_rounds_report(
+            tournaments[int(user_input) - 1]["rounds"])
 
     def tournament_matches(self):
         """Tous les matchs d'un tournoi"""
