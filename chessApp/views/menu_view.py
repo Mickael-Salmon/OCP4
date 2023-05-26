@@ -133,6 +133,7 @@ class MenuViews:
             "\033[94mRounds : 4\033[0m",
             f"Durée : {info[3]}"
         ]
+        #Utilisation de la méthode .join() pour afficher les éléments de la liste séparés par un séparateur
         print(" | ".join(tournament_info))
 
         print("\n\033[1mPlayers (8 total) :\033[0m\n")
