@@ -117,3 +117,9 @@ $ pip install -r requirements.txt
 <h3>Lancer le programme </h3>
 
 $ python main.py
+
+<h3>Générer un nouveau rapport flake8 </h3>
+$ flake8 --format=html --htmldir=flake8_report</br>
+OU pour exclure un environnement virtuel ajouter --exclude=nom de l'environnement</br>
+Exemple : </br>
+$ flake8 --format=html --htmldir=flake8_report --exclude=.env</br>
