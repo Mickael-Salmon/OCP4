@@ -1,0 +1,5 @@
+prettytable==3.7.0
+tinydb==4.7.1
+flake8==6.0.0
+flake8-html-0.4.3
+

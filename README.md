@@ -1,5 +1,8 @@
-<h2 align="center" Bienvenue !>
-</h2>
+<div align="center">
+  <a href="" target="_blank" rel="noreferrer">
+    <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png">
+  </a>
+</div>
 
 <h2 align="center"> Vous trouverez ici le Projet 4 du parcours<a href="https://openclassrooms.com/fr/paths/518-developpeur-dapplication-python" target="_blank" rel="noreferrer"> Développeur d'application - Python</a> 👋
  </h2>
@@ -76,13 +79,13 @@ Depuis un terminal , se déplacer dans le dossier applicatif souhaité :
 
 <h3>Récupération du projet</h3> 
 
-$ git clone https://github.com/MicSa/OCP4/
+$ git clone https://github.com/Mickael-Salmon/OCP4/
 
 <h3>Activer l'environnement virtuel </h3> 
 
-$ cd OCP4 
-$ python -m venv venvOCP4 
-$ ~env\scripts\activate
+$ cd OCP4</br>
+$ python -m venv .envOCP4</br> 
+$ ~env\scripts\activate</br>
 
 <h3>Installer les paquets requis </h3>
 
@@ -98,14 +101,14 @@ Depuis un terminal, se déplacer dans dossier souhaité.
 
 <h3>Récupération du projet</h3>
 
-$ git clone https://github.com/MicSa/OCP4/
+$ git clone https://github.com/Mickael-Salmon/OCP4/
 
 
 <h3>Activer l'environnement virtuel </h3>
 
 $ cd OCP4 </br>
-$ python3 -m venv venvOCP4 </br>
-$ source env/bin/activate </br>
+$ python3 -m venv .envOCP4 </br>
+$ source .envOCP4/bin/activate </br>
 
 <h3>Installer les paquets requis </h3>
 
