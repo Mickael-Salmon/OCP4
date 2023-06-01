@@ -16,4 +16,4 @@
             if user_input.isdigit() or user_input in valid_inputs:
                 return user_input
 
-            print("♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜")
+            print("♜ ♞ ♝ ♛ MERCI de suivre les indications à l'écran ♚ ♝ ♞ ♜")

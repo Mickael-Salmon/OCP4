@@ -382,5 +382,5 @@ class MenuController:
 
     def new_menu(self):
         """Logique de contrôle du nouveau menu"""
-        # Votre logique de contrôle du nouveau menu
+        # Logique de contrôle du nouveau menu
         pass
