@@ -15,6 +15,10 @@ class MenuController:
         self.menu_view = MenuViews()
         self.tour_cont = TournamentController()
         self.reports_cont = ReportsController()
+        self.menu_view = MenuViews()
+        self.tour_cont = TournamentController()
+        self.reports_cont = ReportsController()
+        self.prompt = "Veuillez entrer un numéro d'option : "
 
     def main_menu_start(self):
         """Sélecteur de menu principal:
@@ -22,8 +26,7 @@ class MenuController:
 
         self.menu_view.main_menu()
         self.menu_view.input_prompt()
-        prompt = "Veuillez entrer un numéro d'option : "
-        user_input = UserInputValidation.get_validated_input(prompt)
+        user_input = UserInputValidation.get_validated_input(self.prompt)
 
         if user_input == "1":
             self.new_tournament_submenu()
@@ -98,14 +101,21 @@ class MenuController:
         self.menu_view.create_tournament_header()
         tournament_info = []
         options = [
-            "name",
-            "location",
+            "nom",
+            "adressse",
             "description"
         ]
 
         for item in options:
             self.menu_view.input_prompt_text(item)
-            user_input = UserInputValidation.get_validated_input(prompt)
+            user_input = ''
+            while not user_input.strip():  # Continue to ask until a non-empty input is provided
+                user_input = input("Veuillez entrer le " + item + ": ")
+            
+            if user_input.lower() == "r":
+                self.main_menu_start()
+            else:
+                tournament_info.append(user_input)
 
             if user_input == "r":
                 self.main_menu_start()
@@ -245,8 +255,11 @@ class MenuController:
         ]
         for item in options:
             self.menu_view.input_prompt_text(item)
-            user_input = input()
-            if user_input == "r":
+            user_input = ''
+            while not user_input.strip():  # Continue to ask until a non-empty input is provided
+                user_input = input("Veuillez entrer le " + item + ": ")
+            
+            if user_input.lower() == "r":
                 self.main_menu_start()
             else:
                 player_info.append(user_input)
@@ -384,3 +397,14 @@ class MenuController:
         """Logique de contrôle du nouveau menu"""
         # Logique de contrôle du nouveau menu
         pass
+
+    def get_validated_input(prompt):
+        while True:
+            print(prompt)
+            user_input = input().lower()
+
+            if user_input.isdigit() or user_input in ["q", "r", "1", "2", "3", "4", "5", "6", "7", "8", "o", "n"]:
+                return user_input
+
+            print("Merci de sélectionner une option valide.")
+

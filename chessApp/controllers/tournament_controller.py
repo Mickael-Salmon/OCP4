@@ -77,7 +77,7 @@ class TournamentController:
 
             self.end_of_round(scores_list, t)
 
-        elif user_input == "back":
+        elif user_input == "r":
             self.back_to_menu()
 
     def next_rounds(self, t):
@@ -300,7 +300,7 @@ class TournamentController:
 
                 self.menu_view.rank_update_header(p)
                 self.menu_view.input_prompt_text("new rank")
-                user_input = UserInputValidation.get_validated_input(prompt)
+                
 
                 if user_input == "back":
                     self.back_to_menu()
