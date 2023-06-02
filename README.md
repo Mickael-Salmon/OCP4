@@ -79,21 +79,34 @@ Depuis un terminal , se déplacer dans le dossier applicatif souhaité :
 
 <h3>Récupération du projet</h3> 
 
-$ git clone https://github.com/Mickael-Salmon/OCP4/
+```
+git clone https://github.com/Mickael-Salmon/OCP4/
+```
 
 <h3>Activer l'environnement virtuel </h3> 
 
-$ cd OCP4</br>
-$ python -m venv .envOCP4</br> 
-$ ~env\scripts\activate</br>
+```
+cd OCP4
+```
+``` 
+python -m venv .envOCP4
+```
+``` 
+~env\scripts\activate
+```
+
 
 <h3>Installer les paquets requis </h3>
 
-$ pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 
 <h3>Lancer le programme</h3>
 
-$ python main.py
+```
+python main.py
+```
 
 <h2>MacOS et Linux : </h2>
 
@@ -101,25 +114,46 @@ Depuis un terminal, se déplacer dans dossier souhaité.
 
 <h3>Récupération du projet</h3>
 
-$ git clone https://github.com/Mickael-Salmon/OCP4/
-
+```
+git clone https://github.com/Mickael-Salmon/OCP4/
+```
 
 <h3>Activer l'environnement virtuel </h3>
 
-$ cd OCP4 </br>
-$ python3 -m venv .envOCP4 </br>
-$ source .envOCP4/bin/activate </br>
+```
+cd OCP4
+```
+
+```
+python3 -m venv .envOCP4
+```
+
+```
+source .envOCP4/bin/activate
+```
 
 <h3>Installer les paquets requis </h3>
 
-$ pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 
 <h3>Lancer le programme </h3>
 
-$ python main.py
+```
+python main.py
+```
 
 <h3>Générer un nouveau rapport flake8 </h3>
-$ flake8 --format=html --htmldir=flake8_report</br>
-OU pour exclure un environnement virtuel ajouter --exclude=nom de l'environnement</br>
+
+```
+flake8 --format=html --htmldir=flake8_report
+```
+
+OU pour exclure un environnement virtuel, ajouter --exclude=nom de l'environnement</br>
+
 Exemple : </br>
-$ flake8 --format=html --htmldir=flake8_report --exclude=.env</br>
+
+```
+flake8 --format=html --htmldir=flake8_report --exclude=.env
+```
