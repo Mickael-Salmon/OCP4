@@ -28,17 +28,17 @@ Elie, votre amie et elle aussi développeuse Python, est membre du club d'échec
 
 - 💬 Vous suggérez que vous pourriez écrire un outil qui permette de gérer les tournois pour aider le club, mais qui fonctionne hors ligne. Elie aime bien votre idée et elle dit qu'elle en discutera la prochaine fois qu'elle se rendra au club. Comme elle s’occupe déjà de plusieurs contrats en freelance, elle accepte de vous recommander comme candidat idéal pour développer cette application.
 
- <h3>Livrables attendus 🔭 </h3> 
-   
+ <h3>Livrables attendus 🔭 </h3>
 
--   Le code de l'application, tel que prescrit dans la spécification technique 
--   Un répertoire contenant un fichier HTML, généré par **flake8-html**, ne montrant aucune erreur de peluchage dans le code 
+
+-   Le code de l'application, tel que prescrit dans la spécification technique
+-   Un répertoire contenant un fichier HTML, généré par **flake8-html**, ne montrant aucune erreur de peluchage dans le code
 -   Un fichier **README.md** contenant des instructions claires sur la manière d'exécuter le programme, de l'utiliser et de générer un nouveau fichier flake8-html
 
 </br>
 
 
- <h3>Structure de dossiers du projet</h3>  
+ <h3>Structure de dossiers du projet</h3>
 
 ```
 ├── controllers
@@ -72,26 +72,26 @@ Le dossier `models` contient les modèles pour les entités dans votre programme
 Le dossier `views` contient tous les fichiers qui concernent l'interface utilisateur, tels que les vues pour les rondes, les rapports et le menu principal.
 Le dossier `database` contient tous les fichiers relatifs aux stockage d'information pour les joueurs et les tournois par TinyDB au format JSON.
 
-<h2> Installation et démarrage du projet</h2> 
-<h3>Windows  </h3> 
+<h2> Installation et démarrage du projet</h2>
+<h3>Windows  </h3>
 
 Depuis un terminal , se déplacer dans le dossier applicatif souhaité :
 
-<h3>Récupération du projet</h3> 
+<h3>Récupération du projet</h3>
 
 ```
 git clone https://github.com/Mickael-Salmon/OCP4/
 ```
 
-<h3>Activer l'environnement virtuel </h3> 
+<h3>Activer l'environnement virtuel </h3>
 
 ```
 cd OCP4
 ```
-``` 
+```
 python -m venv .envOCP4
 ```
-``` 
+```
 ~env\scripts\activate
 ```
 
@@ -110,7 +110,7 @@ python main.py
 
 <h2>MacOS et Linux : </h2>
 
-Depuis un terminal, se déplacer dans dossier souhaité. 
+Depuis un terminal, se déplacer dans dossier souhaité.
 
 <h3>Récupération du projet</h3>
 
@@ -147,13 +147,5 @@ python main.py
 <h3>Générer un nouveau rapport flake8 </h3>
 
 ```
-flake8 --format=html --htmldir=flake8_report
-```
-
-OU pour exclure un environnement virtuel, ajouter --exclude=nom de l'environnement</br>
-
-Exemple : </br>
-
-```
-flake8 --format=html --htmldir=flake8_report --exclude=.env
+flake8 --format=html --htmldir=flake8_reportv2 --exclude=.env/ --max-line-length=119
 ```
