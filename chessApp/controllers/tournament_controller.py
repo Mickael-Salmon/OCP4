@@ -270,7 +270,7 @@ class TournamentController:
         if user_input == "n":
             self.back_to_menu()
 
-        elif user_input == "y":
+        elif user_input == "o":
             while True:
                 self.update_ranks(players)
 
@@ -283,33 +283,33 @@ class TournamentController:
         self.menu_view.input_prompt()
         user_input = UserInputValidation.get_validated_input(prompt)
 
-        if user_input == "back":
+        if user_input == "r":
             self.back_to_menu()
+        else:
+            
+            for i in range(len(players)):
+                if int(user_input) == players[i]["id"]:
+                    p = players[players.index(players[i])]
+                    p = Player(
+                        p['id'],
+                        p['last_name'],
+                        p['first_name'],
+                        p['date_of_birth'],
+                        p['gender'],
+                        p['rank']
+                    )
 
-        for i in range(len(players)):
-            if int(user_input) == players[i]["id"]:
-                p = players[players.index(players[i])]
-                p = Player(
-                    p['id'],
-                    p['last_name'],
-                    p['first_name'],
-                    p['date_of_birth'],
-                    p['gender'],
-                    p['rank']
-                )
+                    self.menu_view.rank_update_header(p)
+                    self.menu_view.input_prompt_text("new rank")
 
-                self.menu_view.rank_update_header(p)
-                self.menu_view.input_prompt_text("new rank")
-                
+                    if user_input == "back":
+                        self.back_to_menu()
 
-                if user_input == "back":
-                    self.back_to_menu()
+                    else:
+                        p.update_player_db(int(user_input), "rank")
+                        players[i]["rank"] = int(user_input)
 
-                else:
-                    p.update_player_db(int(user_input), "rank")
-                    players[i]["rank"] = int(user_input)
-
-                    return players
+        return players  # Cette ligne est maintenant en dehors de la boucle 'for', donc elle n'est exécutée qu'après que tous les joueurs ont été mis à jour.
 
     @staticmethod
     def back_to_menu():
