@@ -109,9 +109,9 @@ class MenuController:
         for item in options:
             self.menu_view.input_prompt_text(item)
             user_input = ''
-            while not user_input.strip():  # Continue to ask until a non-empty input is provided
+            # Continue to ask until a non-empty input is provided
+            while not user_input.strip():
                 user_input = input("Veuillez entrer le " + item + ": ")
-            
             if user_input.lower() == "r":
                 self.main_menu_start()
             else:
@@ -256,9 +256,9 @@ class MenuController:
         for item in options:
             self.menu_view.input_prompt_text(item)
             user_input = ''
-            while not user_input.strip():  # Continue to ask until a non-empty input is provided
+            # Continue to ask until a non-empty input is provided
+            while not user_input.strip():
                 user_input = input("Veuillez entrer le " + item + ": ")
-            
             if user_input.lower() == "r":
                 self.main_menu_start()
             else:
@@ -397,14 +397,3 @@ class MenuController:
         """Logique de contrôle du nouveau menu"""
         # Logique de contrôle du nouveau menu
         pass
-
-    def get_validated_input(prompt):
-        while True:
-            print(prompt)
-            user_input = input().lower()
-
-            if user_input.isdigit() or user_input in ["q", "r", "1", "2", "3", "4", "5", "6", "7", "8", "o", "n"]:
-                return user_input
-
-            print("Merci de sélectionner une option valide.")
-

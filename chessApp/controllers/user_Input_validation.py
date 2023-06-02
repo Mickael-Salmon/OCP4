@@ -1,5 +1,5 @@
-﻿#Fonction globale pour la validation des entrées utilisateur
-#Module spécifique pour éviter les erreurs d'importation circulaire
+﻿# Fonction globale pour la validation des entrées utilisateur
+# Module spécifique pour éviter les erreurs d'importation circulaire
 class UserInputValidation:
     """Fonction globale pour la validation des entrées utilisateur"""
 
@@ -13,4 +13,3 @@ class UserInputValidation:
                 return user_input
 
             print("Merci de sélectionner une option valide.")
-            

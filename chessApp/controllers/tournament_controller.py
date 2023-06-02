@@ -286,7 +286,6 @@ class TournamentController:
         if user_input == "r":
             self.back_to_menu()
         else:
-            
             for i in range(len(players)):
                 if int(user_input) == players[i]["id"]:
                     p = players[players.index(players[i])]
@@ -308,8 +307,9 @@ class TournamentController:
                     else:
                         p.update_player_db(int(user_input), "rank")
                         players[i]["rank"] = int(user_input)
-
-        return players  # Cette ligne est maintenant en dehors de la boucle 'for', donc elle n'est exécutée qu'après que tous les joueurs ont été mis à jour.
+        # Cette ligne est maintenant en dehors de la boucle 'for'
+        # Elle n'est exécutée qu'après que tous les joueurs ont été mis à jour.
+        return players
 
     @staticmethod
     def back_to_menu():
