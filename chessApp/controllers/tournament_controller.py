@@ -32,22 +32,14 @@ class TournamentController:
             t.current_round += 1
             t.update_tournament_db()
 
-            while t.current_round <= t.rounds_total:
-                self.next_rounds(t)
-                t.current_round += 1
-                t.update_tournament_db()
+        while t.current_round <= t.rounds_total:
+            self.next_rounds(t)
+            t.current_round += 1
+            t.update_tournament_db()
 
-        elif 1 < t.current_round <= t.rounds_total:
-            while t.current_round <= t.rounds_total:
-                self.next_rounds(t)
-                t.current_round += 1
-                t.update_tournament_db()
-
+        if t.current_round > t.rounds_total:
             t.end_date = self.timer
             t.update_timer(t.end_date, 'end_date')
-            self.tournament_end(t)
-
-        elif t.current_round > t.rounds_total:
             self.tournament_end(t)
 
     def first_round(self, t):
@@ -81,7 +73,7 @@ class TournamentController:
             self.back_to_menu()
 
     def next_rounds(self, t):
-        """Counds suivants: définir les accords possibles
+        """Rounds suivants: définir les accords possibles
         Obtenez des paires et mettez le tour pour enregistrer sur DB"""
         r = Round(("Round " + str(t.current_round)), self.timer, "TBD")
         t.sort_players_by_score()
@@ -124,7 +116,7 @@ class TournamentController:
             t.rounds.append(r.set_round())
             self.end_of_round(scores_list, t)
 
-        elif user_input == "back":
+        elif user_input == "r":
             self.back_to_menu()
 
     def match_first_option(self, available_list, players_added, r):
@@ -309,7 +301,7 @@ class TournamentController:
                         players[i]["rank"] = int(user_input)
         # Cette ligne est maintenant en dehors de la boucle 'for'
         # Elle n'est exécutée qu'après que tous les joueurs ont été mis à jour.
-        return players
+            return players
 
     @staticmethod
     def back_to_menu():
